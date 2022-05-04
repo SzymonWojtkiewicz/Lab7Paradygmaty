@@ -141,6 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Lab7Paradygmaty.cpp" />
+    <ClCompile Include="TempMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyMatrix.h" />

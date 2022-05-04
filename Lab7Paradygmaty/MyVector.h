@@ -20,11 +20,11 @@ public:
 
 		this->size = size;
 		this->abc = new T[size];
-		std::cout << "ConstrP " << num << " " << typeid(abc).name() <<  std::endl;
+		//std::cout << "ConstrP " << num << " " << typeid(abc).name() <<  std::endl;
 
 	}
 	MyVector(const MyVector<T>& other) {
-		std::cout << "ConstrCpy " << num << " " << typeid(abc).name() << std::endl;
+		//std::cout << "ConstrCpy " << num << " " << typeid(abc).name() << std::endl;
 		this->size = other.lenght();
 		this->abc = new T[this->size];
 
@@ -48,9 +48,9 @@ public:
 
 	~MyVector() {
 		
-		std::cout<< " Destructor " << num << " " << typeid(abc).name() << std::endl;
+		//std::cout<< " Destructor " << num << " " << typeid(abc).name() << std::endl;
 		delete[] abc;
-		std::cout << " Destructor End " << num << " " << typeid(abc).name() << std::endl;
+		//std::cout << " Destructor End " << num << " " << typeid(abc).name() << std::endl;
 	}
 
 

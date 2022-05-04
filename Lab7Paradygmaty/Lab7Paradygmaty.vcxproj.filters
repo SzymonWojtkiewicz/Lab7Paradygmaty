@@ -18,6 +18,9 @@
     <ClCompile Include="Lab7Paradygmaty.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TempMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyVector.h">

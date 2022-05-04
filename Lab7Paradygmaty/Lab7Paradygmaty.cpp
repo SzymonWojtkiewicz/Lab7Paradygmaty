@@ -1,57 +1,53 @@
-#include "MyVector.h"
+#include "MyMatrix.h"
 #include <iostream>
 
 
 
 int main()
 {
-	//	typedef MyVector::MyVector<int> a;	//default constructor
-	MyVector<int> a;	//default constructor
+	MyMatrix<int> a;
 	
-	std::cout << a;		//overload <<
-	{					//elements to stream
-		MyVector<double> b(2);	//constructor with size argument
-		std::cout << b;
-	}
-	MyVector<int>* z = new MyVector<int>;
-
-	delete z;		//destructor
-
+	a[0][0] = 0;
+	a[0][1] = 1;
+	a[0][2] = 2;
+	a[0][3] = 3;
+	a[1][0] = 4;
+	a[1][1] = 5;
+	a[1][2] = 6;
+	a[1][3] = 7;
+	a[2][0] = 8;
+	a[2][1] = 9;
+	a[2][2] = 10;
+	a[2][3] = 11;
+	a[3][0] = 12;
+	a[3][1] = 13;
+	a[3][2] = 14;
+	a[3][3] = 15;
+	MyMatrix<int> b(a);
+	a--;
+	MyMatrix<int> c = a + b;
+	std::cout << c << std::endl;
 	
-	a[0] = 1;
-	a[1] = 2;
-	a[2] = 3;
-	a[3] = 4;
-	a[4] = 5;
-	a[5] = 6;
-	std::cout << a;// << b;
-	MyVector<int> c = a;	//cpy constructor =
-	std::cout << c;
-
-	MyVector<int> d(a + c);//cpy constructor and overload +
-	std::cout << d;
-	d = d - c;				//overload -
-	std::cout << d;
-
-	d++;		//overload postfix ++
-	std::cout << d;
-
-	++d;		//overload prefix ++
-	std::cout << d;
-
-	d--;		//overload postfix --
-	std::cout << d;
-
-	--d;		//overload prefix --
-	std::cout << d;
-
-	std::cout << d.lenght() << std::endl;//size of vector
-
-	int x = a * a;		//scalar multiplication
-	std::cout << x;
+	MyMatrix<int> d(3, 2);
+	MyMatrix<int> e(2, 3);
+	
+	d[0][0] = 0;
+	d[0][1] = 1;
+	d[1][0] = 2;
+	d[1][1] = 3;
+	d[2][0] = 4;
+	d[2][1] = 5;
 	
 	
+	e[0][0] = 6;
+	e[0][1] = 7;
+	e[0][2] = 8;
+	e[1][0] = 9;
+	e[1][1] = 10;
+	e[1][2] = 11;
 	
-	//return 0;
+	std::cout << d * e;
+	
+	std::cout << a.determinant();
 	
 }
